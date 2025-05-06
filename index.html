@@ -47,34 +47,50 @@
         Beranda
        </a>
       </li>
+      <li class="relative group">
+       <a class="block py-2 md:py-0 text-green-200 hover:text-green-400 flex items-center gap-1" href="#">
+        Program
+        <i class="fas fa-chevron-down text-xs"></i>
+       </a>
+       <ul class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
+        <li>
+         <a class="block px-4 py-2 text-green-800 hover:bg-green-50" href="#program">
+          Program TAAT
+         </a>
+        </li>
+        <li>
+         <a class="block px-4 py-2 text-green-800 hover:bg-green-50" href="#donasi-online">
+          Donasi Online
+         </a>
+        </li>
+        <li>
+         <a class="block px-4 py-2 text-green-800 hover:bg-green-50" href="#kalkulator-zakat">
+          Kalkulator Zakat
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="relative group">
+       <a class="block py-2 md:py-0 text-green-200 hover:text-green-400 flex items-center gap-1" href="#">
+        Peserta TAAT
+        <i class="fas fa-chevron-down text-xs"></i>
+       </a>
+       <ul class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
+        <li>
+         <a class="block px-4 py-2 text-green-800 hover:bg-green-50" href="#bergabung-taat">
+          Bergabung
+         </a>
+        </li>
+        <li>
+         <a class="block px-4 py-2 text-green-800 hover:bg-green-50" href="#galeri-taat">
+          Galeri Peserta
+         </a>
+        </li>
+       </ul>
+      </li>
       <li>
        <a class="block py-2 md:py-0 text-green-200 hover:text-green-400" href="#tentang-kami">
         Tentang Kami
-       </a>
-      </li>
-      <li>
-       <a class="block py-2 md:py-0 text-green-200 hover:text-green-400" href="#program">
-        Program
-       </a>
-      </li>
-      <li>
-       <a class="block py-2 md:py-0 text-green-200 hover:text-green-400" href="#donasi-online">
-        Donasi Online
-       </a>
-      </li>
-      <li>
-       <a class="block py-2 md:py-0 text-green-200 hover:text-green-400" href="#kalkulator-zakat">
-        Kalkulator Zakat
-       </a>
-      </li>
-      <li>
-       <a class="block py-2 md:py-0 text-green-200 hover:text-green-400" href="#bergabung-taat">
-        Bergabung Peserta TAAT
-       </a>
-      </li>
-      <li>
-       <a class="block py-2 md:py-0 text-green-200 hover:text-green-400" href="#galeri-taat">
-        Galeri Peserta TAAT
        </a>
       </li>
       <li>
@@ -84,7 +100,7 @@
       </li>
       <li>
        <a class="block py-2 md:py-0 text-green-200 hover:text-green-400" href="#kontak-kami">
-        Kontak Kami
+        Kontak
        </a>
       </li>
      </ul>
@@ -92,42 +108,45 @@
    </div>
   </nav>
   <main class="flex-grow container mx-auto px-4 py-10 max-w-7xl">
-   <!-- 1. Beranda -->
-   <section class="mb-12 bg-green-50 rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow" id="beranda" tabindex="0">
-<h2 class="text-center text-green-800 font-extrabold text-3xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
-     Beranda
-    </h2>
-    <div class="mb-8 max-w-3xl mx-auto space-y-4">
-     <h3 class="text-green-700 font-bold text-2xl">
-      Visi &amp; Misi Singkat LAZISNU Kotabaru
-     </h3>
-     <p class="text-justify">
-      Menjadi lembaga amil zakat yang terpercaya dan profesional dalam mengelola zakat, infak, dan sedekah untuk kesejahteraan umat di Kotabaru.
+   <!-- 1. Hero Section -->
+   <section class="mb-12 bg-gradient-to-r from-green-900 via-green-700 to-green-500 rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow relative overflow-hidden" id="beranda" tabindex="0">
+    <div class="absolute inset-0 bg-[url('https://storage.googleapis.com/a1aa/image/pattern.png')] opacity-10"></div>
+    <div class="relative z-10 max-w-3xl mx-auto text-center text-green-100">
+     <h2 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-wider">
+      Selamat Datang di LAZISNU Kotabaru
+     </h2>
+     <p class="text-lg md:text-xl mb-8 leading-relaxed">
+      Bersama kita wujudkan kesejahteraan umat melalui pengelolaan zakat, infak, dan sedekah yang profesional dan amanah.
      </p>
-     <p class="text-justify">
-      Misi kami adalah mengoptimalkan potensi zakat untuk pemberdayaan masyarakat, meningkatkan kesadaran berzakat, dan menjalin kemitraan strategis demi kemaslahatan bersama.
-     </p>
-    </div>
-    <div class="text-center">
-     <a aria-label="Donasi Sekarang" class="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 text-green-100 font-semibold text-lg px-6 py-3 rounded-xl shadow-lg transition" href="#donasi-online" role="button">
-      Donasi Sekarang
-      <i class="fas fa-hand-holding-heart">
-      </i>
-     </a>
+     <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a aria-label="Donasi Sekarang" class="inline-flex items-center gap-2 bg-green-100 hover:bg-green-200 text-green-800 font-semibold text-lg px-8 py-4 rounded-xl shadow-lg transition" href="#donasi-online" role="button">
+       Donasi Sekarang
+       <i class="fas fa-hand-holding-heart"></i>
+      </a>
+      <a aria-label="Pelajari Program" class="inline-flex items-center gap-2 border-2 border-green-100 hover:bg-green-100 hover:text-green-800 text-green-100 font-semibold text-lg px-8 py-4 rounded-xl transition" href="#program" role="button">
+       Pelajari Program
+       <i class="fas fa-info-circle"></i>
+      </a>
+     </div>
     </div>
    </section>
    <!-- 2. Tentang Kami -->
    <section class="mb-12 bg-green-50 rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow" id="tentang-kami" tabindex="0">
-<h2 class="text-center text-green-800 font-extrabold text-3xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+<h2 class="text-center text-green-800 font-extrabold text-xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+
      Tentang Kami
     </h2>
     <div class="max-w-4xl mx-auto space-y-8">
      <div>
-      <h3 class="text-green-700 font-bold text-2xl mb-3">
+      <h3 class="text-green-700 font-bold text-base mb-3">
+
        Sejarah Singkat LAZISNU Kotabaru
       </h3>
       <p class="text-justify">
-       LAZISNU Kotabaru berdiri sebagai lembaga amil zakat yang berkomitmen untuk membantu masyarakat melalui pengelolaan zakat, infak, dan sedekah secara profesional dan transparan sejak tahun 2010.
+        LAZISNU Kotabaru berdiri sebagai lembaga amil zakat yang berkomitmen membantu masyarakat melalui pengelolaan zakat, infak, dan sedekah secara profesional, transparan, dan amanah. LAZISNU merupakan salah satu program unggulan Pengurus Cabang Nahdlatul Ulama (PCNU) Kabupaten Kotabaru, yang mulai dibentuk pada tahun 2025.
+      </p>
+      <p class="text-justify">
+        Cikal bakal pendirian LAZISNU Kotabaru berawal dari program Celengan TAAT (Tabungan Akhirat) yang diluncurkan PCNU Kotabaru pada tahun 2023. Program ini menjadi langkah awal dalam membangun kesadaran dan partisipasi masyarakat dalam berinfaq secara rutin dan terorganisir.
       </p>
      </div>
      <div>
@@ -165,15 +184,17 @@
       </div>
      </div>
      <div>
-      <h3 class="text-green-700 font-bold text-2xl mb-3">
-       Legalitas &amp; Mitra Resmi
+      <h3 class="text-green-700 font-bold text-base mb-3">
+
+       Legalitas
       </h3>
       <p class="text-justify">
-       LAZISNU Kotabaru telah terdaftar secara resmi dan bekerja sama dengan berbagai mitra terpercaya untuk memastikan pengelolaan dana yang aman dan tepat sasaran.
+        LAZISNU Kotabaru telah dibentuk secara resmi sebagai lembaga amil zakat di bawah naungan PCNU Kabupaten Kotabaru. Meskipun masih dalam tahap awal pembangunan, LAZISNU berkomitmen untuk mengelola zakat, infak, dan sedekah secara amanah, profesional, dan transparan sesuai dengan prinsip syariah. 
       </p>
      </div>
      <div>
-      <h3 class="text-green-700 font-bold text-2xl mb-3">
+      <h3 class="text-green-700 font-bold text-base mb-3">
+
        Profil PCNU Kotabaru
       </h3>
       <p class="text-justify mb-4">
@@ -189,54 +210,70 @@
    </section>
    <!-- 3. Program -->
    <section class="mb-12 bg-green-50 rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow max-w-4xl mx-auto" id="program" tabindex="0">
-<h2 class="text-center text-green-800 font-extrabold text-3xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+<h2 class="text-center text-green-800 font-extrabold text-xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+
      Program
     </h2>
     <div class="space-y-6">
-     <h3 class="text-green-700 font-bold text-2xl">
-      Celengan TAAT (Tabungan Akhirat)
-     </h3>
-     <p class="text-justify">
-      Program Celengan TAAT adalah tabungan akhirat yang bertujuan mengajak masyarakat menabung untuk kebaikan akhirat melalui pengelolaan zakat dan sedekah secara rutin.
-     </p>
-     <h5 class="text-green-700 font-semibold text-xl mt-6">
-      Cara Bergabung
-     </h5>
-     <ul class="list-disc list-inside space-y-2 text-justify">
-      <li>
-       Isi formulir pendaftaran peserta TAAT.
-      </li>
-      <li>
-       Pilih metode pengambilan celengan: Ambil Sendiri atau Diantar Pengelola.
-      </li>
-      <li>
-       Ikuti jadwal pengambilan bulanan yang telah ditentukan.
-      </li>
-     </ul>
-     <h5 class="text-green-700 font-semibold text-xl mt-6">
-      Jadwal Pengambilan Bulanan
-     </h5>
-     <p class="text-justify">
-      Pengambilan celengan dilakukan setiap tanggal 25 bulan berjalan. Pastikan Anda siap menerima atau mengantarkan celengan sesuai metode yang dipilih.
-     </p>
-     <div class="text-center mt-6">
-      <a aria-label="Menuju Form Bergabung Peserta TAAT" class="inline-flex items-center gap-2 border-2 border-green-700 text-green-700 font-semibold px-6 py-3 rounded-xl hover:bg-green-700 hover:text-green-100 transition" href="#bergabung-taat" role="link">
-       Bergabung Peserta TAAT
-       <i class="fas fa-arrow-right">
-       </i>
-      </a>
-     </div>
+      <h5 class="text-green-700 font-semibold text-xl mt-6">
+        Celengan TAAT (Tabungan Akhirat)
+      </h5>
+      <p class="text-justify mt-2">
+        Program Celengan TAAT adalah tabungan akhirat yang bertujuan mengajak masyarakat menabung untuk kebaikan akhirat melalui pengelolaan zakat, infak, dan sedekah secara rutin. 
+        Celengan ini menjadi bagian dari ikhtiar membangun kesadaran sosial dan spiritual dalam kehidupan sehari-hari.
+      </p>
+    
+      <h5 class="text-green-700 font-semibold text-xl mt-6">
+        Tujuan Program
+      </h5>
+      <ul class="list-disc list-inside text-justify mt-2">
+        <li>Menumbuhkan kebiasaan beramal setiap hari secara konsisten.</li>
+        <li>Mempermudah masyarakat menyalurkan infak tanpa harus menunggu momen tertentu.</li>
+        <li>Membangun kepedulian dan solidaritas sosial secara berkelanjutan.</li>
+      </ul>
+    
+      <h5 class="text-green-700 font-semibold text-xl mt-6">
+        Cara Kerja
+      </h5>
+      <ol class="list-decimal list-inside text-justify mt-2">
+        <li>Peserta menerima celengan TAAT dari tim pelaksana LAZISNU.</li>
+        <li>Mengisi celengan secara rutin sesuai kemampuan (harian atau mingguan).</li>
+        <li>Celengan akan diambil oleh tim setiap tanggal 25 bulan berjalan.</li>
+        <li>Dana dikumpulkan dan disalurkan secara amanah dan transparan kepada yang membutuhkan.</li>
+      </ol>
+    
+      <h5 class="text-green-700 font-semibold text-xl mt-6">
+        Penggunaan Dana yang Terkumpul
+      </h5>
+      <p class="text-justify mt-1">
+        Dana yang terkumpul dari program Celengan TAAT akan digunakan untuk:
+      </p>
+      <ul class="list-disc list-inside text-justify mt-2">
+        <li>Memberikan bantuan ekonomi kepada kaum dhuafa, yatim, dan mustahik yang membutuhkan.</li>
+        <li>Membiayai kegiatan sosial dan keagamaan, seperti majelis ilmu dan pengajian.</li>
+        <li>Memberikan bantuan darurat kepada korban bencana alam atau situasi darurat lainnya.</li>
+        <li>Menyelenggarakan peringatan Hari Besar Islam sebagai bentuk penguatan spiritual umat.</li>
+      </ul>      
+    
+      <div class="text-center mt-6">
+        <a aria-label="Menuju Form Bergabung Peserta TAAT" class="inline-flex items-center gap-2 border-2 border-green-700 text-green-700 font-semibold px-6 py-3 rounded-xl hover:bg-green-700 hover:text-green-100 transition" href="#bergabung-taat" role="link">
+          Bergabung Peserta TAAT
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
     </div>
+    
    </section>
    <!-- 4. Donasi Online -->
    <section class="mb-12 bg-green-50 rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow max-w-4xl mx-auto" id="donasi-online" tabindex="0">
-    <h2 class="text-center text-green-800 font-extrabold text-3xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+    <h2 class="text-center text-green-800 font-extrabold text-xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+
      Donasi Online
     </h2>
     <div class="flex flex-col md:flex-row items-center justify-center gap-6 bg-green-100 border-2 border-green-500 rounded-xl p-6 shadow-md mb-8">
      <img alt="Logo Bank Syariah Indonesia (BSI) berwarna hijau dan putih" class="select-none w-36 md:w-40" height="60" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6f759396-b8e0-4f99-ddb6-e6dec15199ba.jpg" width="140"/>
 <div class="flex flex-col items-center text-center text-green-800 font-semibold text-lg select-text break-words">
-  <span>No. Rekening:</span>
+  <span>Bank BSI Mandiri:</span>
   <span id="nomor-rekening" class="text-2xl">1234 5678 9012 3456</span>
   <span class="text-green-700 text-base mt-1 italic">a.n Lazisnu Kotabaru</span>
 </div>
@@ -244,7 +281,6 @@
       <i class="fas fa-copy"></i>
       Salin Rekening
      </button>
-     <img alt="QRIS untuk pembayaran donasi LAZISNU Kotabaru" class="rounded-xl shadow-md select-none w-36 md:w-40" height="140" loading="lazy" src="https://storage.googleapis.com/a1aa/image/99635de5-0190-4b3c-5b9b-8c9df4110a3d.jpg" width="140"/>
     </div>
     <form class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8" id="form-donasi" novalidate="" onsubmit="return kirimDonasi(event)">
      <div>
@@ -277,7 +313,8 @@
    </section>
    <!-- 5. Kalkulator Zakat -->
    <section class="mb-12 bg-green-50 rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow max-w-4xl mx-auto" id="kalkulator-zakat" tabindex="0">
-<h2 class="text-center text-green-800 font-extrabold text-3xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+<h2 class="text-center text-green-800 font-extrabold text-xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+
      Kalkulator Zakat
     </h2>
     <form class="grid grid-cols-1 md:grid-cols-2 gap-6" id="form-zakat" novalidate="" onsubmit="return hitungZakat(event)">
@@ -366,43 +403,75 @@
      </a>
     </div>
     <div class="mt-8 p-4 rounded bg-green-200 border border-green-400 max-w-md mx-auto text-green-800 text-sm">
-     <h6 class="font-semibold mb-2">
-      Informasi Nisab &amp; Ketentuan:
-     </h6>
-     <ul class="list-disc list-inside space-y-1">
-      <li>
-       Zakat Penghasilan: 2.5% jika mencapai nisab (85 gram emas/tahun)
-      </li>
-      <li>
-       Zakat Maal: 2.5% dari total harta yang mencapai nisab
-      </li>
-      <li>
-       Zakat Emas: 2.5% jika mencapai 85 gram
-      </li>
-      <li>
-       Zakat Perak: 2.5% jika mencapai 595 gram
-      </li>
-      <li>
-       Zakat Perdagangan: 2.5% dari aset lancar
-      </li>
-      <li>
-       Zakat Pertanian: 5% (irigasi) atau 10% (tadah hujan)
-      </li>
-      <li>
-       Zakat Peternakan: Bervariasi sesuai jenis &amp; jumlah hewan
-      </li>
-      <li>
-       Zakat Tabungan: 2.5% jika mencapai nisab &amp; haul
-      </li>
-      <li>
-       Zakat Investasi: 2.5% dari hasil investasi
-      </li>
-     </ul>
+      <button onclick="openModal('modalNisab')" class="w-full flex items-center justify-between bg-green-100 hover:bg-green-200 text-green-800 font-semibold px-4 py-3 rounded-xl transition">
+        <span>Informasi Nisab & Ketentuan</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
     </div>
    </section>
+
+   <!-- Modal Informasi Nisab -->
+   <div aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-70 flex items-start justify-center p-4 opacity-0 pointer-events-none transition-opacity z-50 overflow-y-auto" id="modalNisab">
+     <div aria-labelledby="modalNisabLabel" aria-modal="true" class="bg-green-50 rounded-2xl shadow-lg w-full max-w-lg relative p-4 mt-16" role="dialog">
+       <div class="flex justify-between items-center mb-3">
+         <h5 class="text-green-800 font-bold text-lg" id="modalNisabLabel">
+           Informasi Nisab & Ketentuan
+         </h5>
+         <button aria-label="Close modal" class="text-green-700 hover:text-green-900 focus:outline-none" onclick="closeModal('modalNisab')">
+           <i class="fas fa-times"></i>
+         </button>
+       </div>
+       <div class="space-y-2 max-h-[60vh] overflow-y-auto pr-2">
+         <div class="bg-white rounded-lg p-3 shadow-sm">
+           <h6 class="text-green-700 font-semibold text-sm mb-1">Zakat Penghasilan</h6>
+           <p class="text-green-800 text-xs">2.5% jika mencapai nisab (85 gram emas/tahun)</p>
+         </div>
+         <div class="bg-white rounded-lg p-3 shadow-sm">
+           <h6 class="text-green-700 font-semibold text-sm mb-1">Zakat Maal</h6>
+           <p class="text-green-800 text-xs">2.5% dari total harta yang mencapai nisab</p>
+         </div>
+         <div class="bg-white rounded-lg p-3 shadow-sm">
+           <h6 class="text-green-700 font-semibold text-sm mb-1">Zakat Emas</h6>
+           <p class="text-green-800 text-xs">2.5% jika mencapai 85 gram</p>
+         </div>
+         <div class="bg-white rounded-lg p-3 shadow-sm">
+           <h6 class="text-green-700 font-semibold text-sm mb-1">Zakat Perak</h6>
+           <p class="text-green-800 text-xs">2.5% jika mencapai 595 gram</p>
+         </div>
+         <div class="bg-white rounded-lg p-3 shadow-sm">
+           <h6 class="text-green-700 font-semibold text-sm mb-1">Zakat Perdagangan</h6>
+           <p class="text-green-800 text-xs">2.5% dari aset lancar</p>
+         </div>
+         <div class="bg-white rounded-lg p-3 shadow-sm">
+           <h6 class="text-green-700 font-semibold text-sm mb-1">Zakat Pertanian</h6>
+           <p class="text-green-800 text-xs">5% (irigasi) atau 10% (tadah hujan)</p>
+         </div>
+         <div class="bg-white rounded-lg p-3 shadow-sm">
+           <h6 class="text-green-700 font-semibold text-sm mb-1">Zakat Peternakan</h6>
+           <p class="text-green-800 text-xs">Bervariasi sesuai jenis & jumlah hewan ternak</p>
+         </div>
+         <div class="bg-white rounded-lg p-3 shadow-sm">
+           <h6 class="text-green-700 font-semibold text-sm mb-1">Zakat Tabungan</h6>
+           <p class="text-green-800 text-xs">2.5% jika mencapai nisab & haul</p>
+         </div>
+         <div class="bg-white rounded-lg p-3 shadow-sm">
+           <h6 class="text-green-700 font-semibold text-sm mb-1">Zakat Investasi</h6>
+           <p class="text-green-800 text-xs">2.5% dari hasil investasi</p>
+         </div>
+       </div>
+       <div class="mt-3 flex justify-end">
+         <button class="bg-green-700 hover:bg-green-800 text-green-100 font-semibold px-4 py-2 rounded-lg shadow transition flex items-center gap-2 text-sm" onclick="closeModal('modalNisab')" type="button">
+           <i class="fas fa-times"></i>
+           Tutup
+         </button>
+       </div>
+     </div>
+   </div>
+
    <!-- 6. Bergabung Peserta TAAT -->
    <section class="mb-12 bg-green-50 rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow max-w-4xl mx-auto" id="bergabung-taat" tabindex="0">
-<h2 class="text-center text-green-800 font-extrabold text-3xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+<h2 class="text-center text-green-800 font-extrabold text-xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+
      Bergabung Menjadi Donatur TAAT
     </h2>
     <form class="grid grid-cols-1 md:grid-cols-2 gap-6" id="form-taat" novalidate="" onsubmit="return submitTAAT(event)">
@@ -475,76 +544,24 @@
    </section>
    <!-- 7. Galeri Peserta Program TAAT -->
    <section class="mb-12 bg-green-50 rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow max-w-7xl mx-auto" id="galeri-taat" tabindex="0">
-<h2 class="text-center text-green-800 font-extrabold text-3xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+    <h2 class="text-center text-green-800 font-extrabold text-xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+
      Donatur Program TAAT
     </h2>
-    <div class="gallery-grid grid grid-cols-3 md:grid-cols-3 gap-6">
-     <div class="relative group cursor-pointer gallery-item" onclick="showFoto(this.querySelector('img'), 'Ahmad Fauzi')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Ahmad Fauzi')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 1, pria mengenakan baju hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/987cd315-5ad4-478e-0159-b679bac77369.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Ahmad Fauzi
-      </div>
-     </div>
-     <div class="relative group cursor-pointer gallery-item" onclick="showFoto(this.querySelector('img'), 'Siti Nurhaliza')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Siti Nurhaliza')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 2, wanita mengenakan hijab hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/cfad29b8-f131-4cd5-1549-bfd1e586215a.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Siti Nurhaliza
-      </div>
-     </div>
-     <div class="relative group cursor-pointer gallery-item" onclick="showFoto(this.querySelector('img'), 'Muhammad Rizal')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Muhammad Rizal')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 3, pria mengenakan kemeja hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/11204246-522a-4ae6-d2a7-b42d847d118b.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Muhammad Rizal
-      </div>
-     </div>
-     <div class="relative group cursor-pointer gallery-item" onclick="showFoto(this.querySelector('img'), 'Dewi Lestari')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Dewi Lestari')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 4, wanita mengenakan baju hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a93949ce-736e-4785-76dc-1df9dbf0e6a0.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Dewi Lestari
-      </div>
-     </div>
-     <div class="relative group cursor-pointer gallery-item" onclick="showFoto(this.querySelector('img'), 'Budi Santoso')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Budi Santoso')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 5, pria mengenakan baju hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/620f8d31-041f-4663-a30c-ad18887520d4.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Budi Santoso
-      </div>
-     </div>
-     <div class="relative group cursor-pointer gallery-item" onclick="showFoto(this.querySelector('img'), 'Rina Marlina')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Rina Marlina')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 6, wanita mengenakan baju hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f273307c-ca05-4a5f-e834-f37835a14e70.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Rina Marlina
-      </div>
-     </div>
-     <div class="relative group cursor-pointer gallery-item" onclick="showFoto(this.querySelector('img'), 'Hendra Wijaya')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Hendra Wijaya')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 7, pria mengenakan baju hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e61b3236-d182-496f-00d5-4d6d6ae4c413.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Hendra Wijaya
-      </div>
-     </div>
-     <div class="relative group cursor-pointer gallery-item" onclick="showFoto(this.querySelector('img'), 'Sari Dewi')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Sari Dewi')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 8, wanita mengenakan baju hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/30f2368e-e14f-4457-6c18-4ec9548c4af0.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Sari Dewi
-      </div>
-     </div>
-     <div class="relative group cursor-pointer gallery-item" onclick="showFoto(this.querySelector('img'), 'Andi Pratama')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Andi Pratama')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 9, pria mengenakan baju hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8f8f1a60-3fe9-4715-41cb-285d0e55b74c.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Andi Pratama
-      </div>
-     </div>
+    <div id="gallery-container" class="gallery-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+     <!-- Kartu donatur akan di-render oleh JavaScript -->
     </div>
     <div class="text-center mt-8">
-     <button aria-label="Lihat Semua Galeri Peserta TAAT" class="inline-flex items-center gap-2 border-2 border-green-700 text-green-700 font-semibold px-6 py-3 rounded-xl hover:bg-green-700 hover:text-green-100 transition" data-modal-target="modalGaleri" data-modal-toggle="modalGaleri" onclick="openModal('modalGaleri')" type="button">
+     <button aria-label="Lihat Semua Galeri Peserta TAAT" class="inline-flex items-center gap-2 border-2 border-green-700 text-green-700 font-semibold px-6 py-3 rounded-xl hover:bg-green-700 hover:text-green-100 transition" onclick="openModal('modalGaleri')" type="button">
       Lihat Semua
-      <i class="fas fa-images">
-      </i>
+      <i class="fas fa-images"></i>
      </button>
     </div>
    </section>
    <!-- 8. Laporan -->
    <section class="mb-12 bg-green-50 rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow max-w-4xl mx-auto" id="laporan" tabindex="0">
-<h2 class="text-center text-green-800 font-extrabold text-3xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+<h2 class="text-center text-green-800 font-extrabold text-xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+
      Laporan
     </h2>
     <div class="bg-gradient-to-tr from-white to-green-50 rounded-3xl shadow-md p-6 hover:shadow-lg transition-shadow">
@@ -596,7 +613,8 @@
    </section>
    <!-- 9. Kontak Kami -->
    <section class="mb-12 max-w-7xl mx-auto px-4 py-10" id="kontak-kami" tabindex="0">
-<h2 class="text-center text-green-800 font-extrabold text-3xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+<h2 class="text-center text-green-800 font-extrabold text-xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+
      Kontak Kami
     </h2>
     <div class="flex flex-col md:flex-row gap-8">
@@ -777,85 +795,127 @@
   <div aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity overflow-auto" id="modalGaleri">
    <div aria-labelledby="modalGaleriLabel" aria-modal="true" class="bg-green-50 rounded-3xl shadow-lg max-w-6xl w-full relative p-6" role="dialog">
     <div class="flex justify-between items-center mb-6">
-     <h5 class="text-green-800 font-extrabold text-3xl uppercase tracking-widest" id="modalGaleriLabel">
-      Galeri Peserta TAAT
-     </h5>
+     <div>
+      <h5 class="text-green-800 font-extrabold text-3xl uppercase tracking-widest" id="modalGaleriLabel">
+       Galeri Peserta TAAT
+      </h5>
+     </div>
      <button aria-label="Close modal" class="text-green-700 hover:text-green-900 focus:outline-none" onclick="closeModal('modalGaleri')">
-      <i class="fas fa-times fa-lg">
-      </i>
+      <i class="fas fa-times fa-lg"></i>
      </button>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-h-[70vh] overflow-y-auto">
-     <div class="relative group cursor-pointer" onclick="showFoto(this.querySelector('img'), 'Ahmad Fauzi')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Ahmad Fauzi')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 1, pria mengenakan baju hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/987cd315-5ad4-478e-0159-b679bac77369.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Ahmad Fauzi
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-h-[70vh] overflow-y-auto p-2">
+     <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+      <div class="relative group cursor-pointer" onclick="showFoto(this.querySelector('img'), 'Shah Rukh Khan')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Shah Rukh Khan')}" role="button" tabindex="0">
+       <img alt="Foto Donatur 1, pria mengenakan baju hijau dan latar belakang hijau" class="rounded-t-xl w-full aspect-square object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/987cd315-5ad4-478e-0159-b679bac77369.jpg" width="400"/>
+       <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+        <h6 class="text-white font-bold text-lg">Shah Rukh Khan</h6>
+        <p class="text-green-200 text-sm">Bergabung: Januari 2024</p>
+       </div>
+      </div>
+      <div class="p-4">
+       <div class="flex items-center gap-2 text-green-600 mb-2">
+        <i class="fas fa-map-marker-alt"></i>
+        <span class="text-sm">Kotabaru, Kalimantan Selatan</span>
+       </div>
+       <div class="flex items-center gap-2 text-green-600">
+        <i class="fas fa-hand-holding-heart"></i>
+        <span class="text-sm">Donatur Rutin</span>
+       </div>
       </div>
      </div>
-     <div class="relative group cursor-pointer" onclick="showFoto(this.querySelector('img'), 'Siti Nurhaliza')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Siti Nurhaliza')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 2, wanita mengenakan hijab hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/cfad29b8-f131-4cd5-1549-bfd1e586215a.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Siti Nurhaliza
+
+     <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+      <div class="relative group cursor-pointer" onclick="showFoto(this.querySelector('img'), 'Priyanka Chopra')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Priyanka Chopra')}" role="button" tabindex="0">
+       <img alt="Foto Donatur 2, wanita mengenakan hijab hijau dan latar belakang hijau" class="rounded-t-xl w-full aspect-square object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/cfad29b8-f131-4cd5-1549-bfd1e586215a.jpg" width="400"/>
+       <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+        <h6 class="text-white font-bold text-lg">Priyanka Chopra</h6>
+        <p class="text-green-200 text-sm">Bergabung: Februari 2024</p>
+       </div>
+      </div>
+      <div class="p-4">
+       <div class="flex items-center gap-2 text-green-600 mb-2">
+        <i class="fas fa-map-marker-alt"></i>
+        <span class="text-sm">Kotabaru, Kalimantan Selatan</span>
+       </div>
+       <div class="flex items-center gap-2 text-green-600">
+        <i class="fas fa-hand-holding-heart"></i>
+        <span class="text-sm">Donatur Rutin</span>
+       </div>
       </div>
      </div>
-     <div class="relative group cursor-pointer" onclick="showFoto(this.querySelector('img'), 'Muhammad Rizal')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Muhammad Rizal')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 3, pria mengenakan kemeja hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/11204246-522a-4ae6-d2a7-b42d847d118b.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Muhammad Rizal
+
+     <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+      <div class="relative group cursor-pointer" onclick="showFoto(this.querySelector('img'), 'Aamir Khan')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Aamir Khan')}" role="button" tabindex="0">
+       <img alt="Foto Donatur 3, pria mengenakan kemeja hijau dan latar belakang hijau" class="rounded-t-xl w-full aspect-square object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/11204246-522a-4ae6-d2a7-b42d847d118b.jpg" width="400"/>
+       <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+        <h6 class="text-white font-bold text-lg">Aamir Khan</h6>
+        <p class="text-green-200 text-sm">Bergabung: Maret 2024</p>
+       </div>
+      </div>
+      <div class="p-4">
+       <div class="flex items-center gap-2 text-green-600 mb-2">
+        <i class="fas fa-map-marker-alt"></i>
+        <span class="text-sm">Kotabaru, Kalimantan Selatan</span>
+       </div>
+       <div class="flex items-center gap-2 text-green-600">
+        <i class="fas fa-hand-holding-heart"></i>
+        <span class="text-sm">Donatur Rutin</span>
+       </div>
       </div>
      </div>
-     <div class="relative group cursor-pointer" onclick="showFoto(this.querySelector('img'), 'Dewi Lestari')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Dewi Lestari')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 4, wanita mengenakan baju hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a93949ce-736e-4785-76dc-1df9dbf0e6a0.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Dewi Lestari
-      </div>
-     </div>
-     <div class="relative group cursor-pointer" onclick="showFoto(this.querySelector('img'), 'Budi Santoso')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Budi Santoso')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 5, pria mengenakan baju hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/620f8d31-041f-4663-a30c-ad18887520d4.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Budi Santoso
-      </div>
-     </div>
-     <div class="relative group cursor-pointer" onclick="showFoto(this.querySelector('img'), 'Rina Marlina')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Rina Marlina')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 6, wanita mengenakan baju hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f273307c-ca05-4a5f-e834-f37835a14e70.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Rina Marlina
-      </div>
-     </div>
-     <div class="relative group cursor-pointer" onclick="showFoto(this.querySelector('img'), 'Hendra Wijaya')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Hendra Wijaya')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 7, pria mengenakan baju hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e61b3236-d182-496f-00d5-4d6d6ae4c413.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Hendra Wijaya
-      </div>
-     </div>
-     <div class="relative group cursor-pointer" onclick="showFoto(this.querySelector('img'), 'Sari Dewi')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Sari Dewi')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 8, wanita mengenakan baju hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/30f2368e-e14f-4457-6c18-4ec9548c4af0.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Sari Dewi
-      </div>
-     </div>
-     <div class="relative group cursor-pointer" onclick="showFoto(this.querySelector('img'), 'Andi Pratama')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), 'Andi Pratama')}" role="button" tabindex="0">
-      <img alt="Foto Donatur 9, pria mengenakan baju hijau dan latar belakang hijau" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square group-hover:scale-105 transition-transform" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8f8f1a60-3fe9-4715-41cb-285d0e55b74c.jpg" width="400"/>
-      <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl opacity-0 group-hover:opacity-100 transition-opacity select-none">
-       Andi Pratama
-      </div>
-     </div>
+
+     <!-- Tambahkan 12 kartu lainnya dengan format yang sama -->
     </div>
-    <div class="mt-6 flex justify-end">
-     <button class="bg-green-700 hover:bg-green-800 text-green-100 font-semibold px-6 py-3 rounded-xl shadow-lg transition" onclick="closeModal('modalGaleri')" type="button">
+
+    <div class="mt-6 flex justify-between items-center">
+     <div class="text-green-600">
+      <i class="fas fa-info-circle"></i>
+      <span class="ml-2">Total 15 Peserta Aktif</span>
+     </div>
+     <button class="bg-green-700 hover:bg-green-800 text-green-100 font-semibold px-6 py-3 rounded-xl shadow-lg transition flex items-center gap-2" onclick="closeModal('modalGaleri')" type="button">
+      <i class="fas fa-times"></i>
       Tutup
      </button>
     </div>
    </div>
   </div>
+
+  <!-- Modal Foto Individual -->
+  <div aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity" id="modalFoto">
+   <div aria-labelledby="modalFotoNama" aria-modal="true" class="bg-transparent max-w-4xl w-full relative" role="dialog">
+    <button aria-label="Close modal" class="absolute -top-12 right-0 text-white hover:text-green-300 focus:outline-none" onclick="closeModal('modalFoto')">
+     <i class="fas fa-times fa-2x"></i>
+    </button>
+    <img alt="Foto Peserta TAAT" class="w-full rounded-xl shadow-2xl" id="modalFotoImg" src=""/>
+    <div class="mt-4 text-center">
+     <h5 class="text-white font-extrabold text-2xl" id="modalFotoNama"></h5>
+     <p class="text-green-200 mt-2">Peserta Program TAAT</p>
+    </div>
+   </div>
+  </div>
   <script>
-   // Navbar toggle
+   // Navbar toggle dengan dropdown
     const navToggle = document.getElementById("nav-toggle");
     const navMenu = document.getElementById("navbarNavDropdown");
+
     navToggle.addEventListener("click", () => {
       const expanded = navToggle.getAttribute("aria-expanded") === "true";
       navToggle.setAttribute("aria-expanded", !expanded);
       navMenu.classList.toggle("hidden");
+    });
+
+    // Tutup dropdown saat klik di luar
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest("#navbarNavDropdown")) {
+        const dropdowns = document.querySelectorAll("#navbarNavDropdown ul");
+        dropdowns.forEach(dropdown => {
+          if (!dropdown.classList.contains("hidden")) {
+            dropdown.classList.add("hidden");
+          }
+        });
+      }
     });
 
     // Format Rupiah function
@@ -1126,6 +1186,10 @@
       modal.classList.remove("opacity-0", "pointer-events-none");
       modal.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
+      
+      if (id === "modalGaleri") {
+        renderGaleri();
+      }
     }
 
     function closeModal(id) {
@@ -1137,22 +1201,24 @@
 
     // Close modals on outside click or Escape key
     window.addEventListener("click", (e) => {
-      const modalFoto = document.getElementById("modalFoto");
-      const modalGaleri = document.getElementById("modalGaleri");
-      if (
-        (e.target === modalFoto && !modalFoto.classList.contains("opacity-0")) ||
-        (e.target === modalGaleri && !modalGaleri.classList.contains("opacity-0"))
-      ) {
-        closeModal(modalFoto === e.target ? "modalFoto" : "modalGaleri");
-      }
+      const modals = ["modalFoto", "modalGaleri", "modalNisab"];
+      modals.forEach(modalId => {
+        const modal = document.getElementById(modalId);
+        if (e.target === modal && !modal.classList.contains("opacity-0")) {
+          closeModal(modalId);
+        }
+      });
     });
 
     window.addEventListener("keydown", (e) => {
       if (e.key === "Escape") {
-        const modalFoto = document.getElementById("modalFoto");
-        const modalGaleri = document.getElementById("modalGaleri");
-        if (!modalFoto.classList.contains("opacity-0")) closeModal("modalFoto");
-        if (!modalGaleri.classList.contains("opacity-0")) closeModal("modalGaleri");
+        const modals = ["modalFoto", "modalGaleri", "modalNisab"];
+        modals.forEach(modalId => {
+          const modal = document.getElementById(modalId);
+          if (!modal.classList.contains("opacity-0")) {
+            closeModal(modalId);
+          }
+        });
       }
     });
 
@@ -1160,6 +1226,156 @@
     function hideToast() {
       const toast = document.getElementById("toastSuccess");
       toast.classList.add("opacity-0", "pointer-events-none");
+    }
+
+    // Data Donatur TAAT
+    const dataDonatur = [
+      {
+        id: 1,
+        nama: "Shah Rukh Khan",
+        foto: "https://storage.googleapis.com/a1aa/image/987cd315-5ad4-478e-0159-b679bac77369.jpg",
+        tanggalBergabung: "Januari 2024",
+        lokasi: "Kotabaru, Kalimantan Selatan",
+        status: "Donatur Rutin",
+        deskripsi: "Peserta Program TAAT"
+      },
+      {
+        id: 2,
+        nama: "Priyanka Chopra",
+        foto: "https://storage.googleapis.com/a1aa/image/cfad29b8-f131-4cd5-1549-bfd1e586215a.jpg",
+        tanggalBergabung: "Februari 2024",
+        lokasi: "Kotabaru, Kalimantan Selatan",
+        status: "Donatur Rutin",
+        deskripsi: "Peserta Program TAAT"
+      },
+      {
+        id: 3,
+        nama: "Aamir Khan",
+        foto: "https://storage.googleapis.com/a1aa/image/11204246-522a-4ae6-d2a7-b42d847d118b.jpg",
+        tanggalBergabung: "Maret 2024",
+        lokasi: "Kotabaru, Kalimantan Selatan",
+        status: "Donatur Rutin",
+        deskripsi: "Peserta Program TAAT"
+      },
+      {
+        id: 4,
+        nama: "Deepika Padukone",
+        foto: "https://storage.googleapis.com/a1aa/image/a93949ce-736e-4785-76dc-1df9dbf0e6a0.jpg",
+        tanggalBergabung: "April 2024",
+        lokasi: "Kotabaru, Kalimantan Selatan",
+        status: "Donatur Rutin",
+        deskripsi: "Peserta Program TAAT"
+      },
+      {
+        id: 5,
+        nama: "Hrithik Roshan",
+        foto: "https://storage.googleapis.com/a1aa/image/620f8d31-041f-4663-a30c-ad18887520d4.jpg",
+        tanggalBergabung: "Mei 2024",
+        lokasi: "Kotabaru, Kalimantan Selatan",
+        status: "Donatur Rutin",
+        deskripsi: "Peserta Program TAAT"
+      },
+      {
+        id: 6,
+        nama: "Katrina Kaif",
+        foto: "https://storage.googleapis.com/a1aa/image/f273307c-ca05-4a5f-e834-f37835a14e70.jpg",
+        tanggalBergabung: "Juni 2024",
+        lokasi: "Kotabaru, Kalimantan Selatan",
+        status: "Donatur Rutin",
+        deskripsi: "Peserta Program TAAT"
+      },
+      {
+        id: 7,
+        nama: "Ranbir Kapoor",
+        foto: "https://storage.googleapis.com/a1aa/image/e61b3236-d182-496f-00d5-4d6d6ae4c413.jpg",
+        tanggalBergabung: "Juli 2024",
+        lokasi: "Kotabaru, Kalimantan Selatan",
+        status: "Donatur Rutin",
+        deskripsi: "Peserta Program TAAT"
+      },
+      {
+        id: 8,
+        nama: "Alia Bhatt",
+        foto: "https://storage.googleapis.com/a1aa/image/30f2368e-e14f-4457-6c18-4ec9548c4af0.jpg",
+        tanggalBergabung: "Agustus 2024",
+        lokasi: "Kotabaru, Kalimantan Selatan",
+        status: "Donatur Rutin",
+        deskripsi: "Peserta Program TAAT"
+      },
+      {
+        id: 9,
+        nama: "Akshay Kumar",
+        foto: "https://storage.googleapis.com/a1aa/image/8f8f1a60-3fe9-4715-41cb-285d0e55b74c.jpg",
+        tanggalBergabung: "September 2024",
+        lokasi: "Kotabaru, Kalimantan Selatan",
+        status: "Donatur Rutin",
+        deskripsi: "Peserta Program TAAT"
+      }
+    ];
+
+    // Fungsi untuk menampilkan kartu donatur
+    function renderDonaturCard(donatur) {
+      return `
+        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+          <div class="relative">
+            <img alt="Foto ${donatur.nama}" class="rounded-t-xl w-full aspect-square object-cover" loading="lazy" src="${donatur.foto}"/>
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+              <h6 class="text-white font-bold text-lg">${donatur.nama}</h6>
+              <p class="text-green-200 text-sm">Bergabung: ${donatur.tanggalBergabung}</p>
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="flex items-center gap-2 text-green-600 mb-2">
+              <i class="fas fa-map-marker-alt"></i>
+              <span class="text-sm">${donatur.lokasi}</span>
+            </div>
+            <div class="flex items-center gap-2 text-green-600">
+              <i class="fas fa-hand-holding-heart"></i>
+              <span class="text-sm">${donatur.status}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Fungsi untuk menampilkan galeri
+    function renderGaleri() {
+      const galeriContainer = document.querySelector('#modalGaleri .grid');
+      if (galeriContainer) {
+        galeriContainer.innerHTML = dataDonatur.map(donatur => renderDonaturCard(donatur)).join('');
+      }
+    }
+
+    // Fungsi untuk menampilkan 9 donatur pertama di galeri utama
+    function renderGaleriUtama() {
+      const container = document.getElementById('gallery-container');
+      if (container) {
+        // Ambil 9 donatur pertama
+        const donaturUtama = dataDonatur.slice(0, 9);
+        container.innerHTML = donaturUtama.map(donatur => `
+          <div class="relative">
+            <img alt="Foto ${donatur.nama}" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square" loading="lazy" src="${donatur.foto}"/>
+            <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl">
+              ${donatur.nama}
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Panggil renderGaleriUtama saat halaman dimuat
+    document.addEventListener('DOMContentLoaded', renderGaleriUtama);
+
+    // Panggil renderGaleri saat modal dibuka
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove("opacity-0", "pointer-events-none");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      
+      if (id === "modalGaleri") {
+        renderGaleri();
+      }
     }
   </script>
  </body>
