@@ -1353,11 +1353,8 @@
         // Ambil 9 donatur pertama
         const donaturUtama = dataDonatur.slice(0, 9);
         container.innerHTML = donaturUtama.map(donatur => `
-          <div class="relative">
+          <div class="relative cursor-pointer" onclick="showFoto(this.querySelector('img'), '${donatur.nama}')">
             <img alt="Foto ${donatur.nama}" class="rounded-xl border-4 border-green-500 shadow-md object-cover w-full aspect-square" loading="lazy" src="${donatur.foto}"/>
-            <div class="absolute bottom-0 left-0 right-0 bg-green-700 bg-opacity-90 text-green-100 text-center py-2 rounded-b-xl">
-              ${donatur.nama}
-            </div>
           </div>
         `).join('');
       }
