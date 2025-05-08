@@ -28,6 +28,15 @@
      }
    }
   </style>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 0.3s ease-out;
+    }
+  </style>
  </head>
  <body class="flex flex-col min-h-screen bg-white text-gray-800">
   <!-- Navbar -->
@@ -37,73 +46,74 @@
      <a class="text-green-200 font-extrabold text-2xl tracking-widest hover:text-green-300 transition-colors" href="#beranda">
       LAZISNU Kotabaru
      </a>
-     <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="text-green-200 md:hidden focus:outline-none focus:ring-2 focus:ring-green-300" id="nav-toggle">
-      <i class="fas fa-bars fa-lg">
-      </i>
+     <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="text-green-200 md:hidden focus:outline-none focus:ring-2 focus:ring-green-300 p-2 rounded-lg hover:bg-green-700 transition-colors" id="nav-toggle">
+      <i class="fas fa-bars fa-lg"></i>
      </button>
-     <ul class="hidden w-full md:flex md:w-auto md:space-x-6 text-sm font-semibold" id="navbarNavDropdown">
-      <li>
-       <a aria-current="page" class="block py-2 md:py-0 text-green-200 hover:text-green-400 md:font-bold" href="#beranda">
-        Beranda
-       </a>
-      </li>
-      <li class="relative group">
-       <a class="block py-2 md:py-0 text-green-200 hover:text-green-400 flex items-center gap-1" href="#">
-        Program
-        <i class="fas fa-chevron-down text-xs"></i>
-       </a>
-       <ul class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
-        <li>
-         <a class="block px-4 py-2 text-green-800 hover:bg-green-50" href="#program">
-          Program TAAT
-         </a>
-        </li>
-        <li>
-         <a class="block px-4 py-2 text-green-800 hover:bg-green-50" href="#donasi-online">
-          Donasi Online
-         </a>
-        </li>
-        <li>
-         <a class="block px-4 py-2 text-green-800 hover:bg-green-50" href="#kalkulator-zakat">
-          Kalkulator Zakat
-         </a>
-        </li>
-       </ul>
-      </li>
-      <li class="relative group">
-       <a class="block py-2 md:py-0 text-green-200 hover:text-green-400 flex items-center gap-1" href="#">
-        Peserta TAAT
-        <i class="fas fa-chevron-down text-xs"></i>
-       </a>
-       <ul class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block">
-        <li>
-         <a class="block px-4 py-2 text-green-800 hover:bg-green-50" href="#bergabung-taat">
-          Bergabung
-         </a>
-        </li>
-        <li>
-         <a class="block px-4 py-2 text-green-800 hover:bg-green-50" href="#galeri-taat">
-          Galeri Peserta
-         </a>
-        </li>
-       </ul>
-      </li>
-      <li>
-       <a class="block py-2 md:py-0 text-green-200 hover:text-green-400" href="#tentang-kami">
-        Tentang Kami
-       </a>
-      </li>
-      <li>
-       <a class="block py-2 md:py-0 text-green-200 hover:text-green-400" href="#laporan">
-        Laporan
-       </a>
-      </li>
-      <li>
-       <a class="block py-2 md:py-0 text-green-200 hover:text-green-400" href="#kontak-kami">
-        Kontak
-       </a>
-      </li>
-     </ul>
+     <div class="hidden w-full md:block md:w-auto" id="navbarNavDropdown">
+      <ul class="flex flex-col md:flex-row md:space-x-6 text-sm font-semibold mt-4 md:mt-0 bg-green-800 md:bg-transparent rounded-xl p-4 md:p-0">
+       <li class="mb-2 md:mb-0">
+        <a aria-current="page" class="block py-2 px-4 md:py-0 text-green-200 hover:text-green-400 hover:bg-green-700 md:hover:bg-transparent rounded-lg transition-colors" href="#beranda">
+         <i class="fas fa-home mr-2"></i>Beranda
+        </a>
+       </li>
+       <li class="relative group mb-2 md:mb-0">
+        <a class="block py-2 px-4 md:py-0 text-green-200 hover:text-green-400 hover:bg-green-700 md:hover:bg-transparent rounded-lg transition-colors flex items-center justify-between" href="#">
+         <span><i class="fas fa-hands-helping mr-2"></i>Program</span>
+         <i class="fas fa-chevron-down text-xs md:ml-1"></i>
+        </a>
+        <ul class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block z-50">
+         <li>
+          <a class="block px-4 py-2 text-green-800 hover:bg-green-50 transition-colors" href="#program">
+           <i class="fas fa-star mr-2"></i>Program TAAT
+          </a>
+         </li>
+         <li>
+          <a class="block px-4 py-2 text-green-800 hover:bg-green-50 transition-colors" href="#donasi-online">
+           <i class="fas fa-hand-holding-heart mr-2"></i>Donasi Online
+          </a>
+         </li>
+         <li>
+          <a class="block px-4 py-2 text-green-800 hover:bg-green-50 transition-colors" href="#kalkulator-zakat">
+           <i class="fas fa-calculator mr-2"></i>Kalkulator Zakat
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="relative group mb-2 md:mb-0">
+        <a class="block py-2 px-4 md:py-0 text-green-200 hover:text-green-400 hover:bg-green-700 md:hover:bg-transparent rounded-lg transition-colors flex items-center justify-between" href="#">
+         <span><i class="fas fa-users mr-2"></i>Peserta TAAT</span>
+         <i class="fas fa-chevron-down text-xs md:ml-1"></i>
+        </a>
+        <ul class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 hidden group-hover:block z-50">
+         <li>
+          <a class="block px-4 py-2 text-green-800 hover:bg-green-50 transition-colors" href="#bergabung-taat">
+           <i class="fas fa-user-plus mr-2"></i>Bergabung
+          </a>
+         </li>
+         <li>
+          <a class="block px-4 py-2 text-green-800 hover:bg-green-50 transition-colors" href="#galeri-taat">
+           <i class="fas fa-images mr-2"></i>Galeri Peserta
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="mb-2 md:mb-0">
+        <a class="block py-2 px-4 md:py-0 text-green-200 hover:text-green-400 hover:bg-green-700 md:hover:bg-transparent rounded-lg transition-colors" href="#tentang-kami">
+         <i class="fas fa-info-circle mr-2"></i>Tentang Kami
+        </a>
+       </li>
+       <li class="mb-2 md:mb-0">
+        <a class="block py-2 px-4 md:py-0 text-green-200 hover:text-green-400 hover:bg-green-700 md:hover:bg-transparent rounded-lg transition-colors" href="#laporan">
+         <i class="fas fa-chart-bar mr-2"></i>Laporan
+        </a>
+       </li>
+       <li class="mb-2 md:mb-0">
+        <a class="block py-2 px-4 md:py-0 text-green-200 hover:text-green-400 hover:bg-green-700 md:hover:bg-transparent rounded-lg transition-colors" href="#kontak-kami">
+         <i class="fas fa-envelope mr-2"></i>Kontak
+        </a>
+       </li>
+      </ul>
+     </div>
     </div>
    </div>
   </nav>
@@ -604,7 +614,7 @@
       </div>
       <div class="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-default">
        <img alt="Foto kegiatan pembagian bantuan sembako oleh LAZISNU Kotabaru" class="w-full object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3181a4b3-d858-4154-7e33-9b0652598fed.jpg" width="600"/>
-<div class="bg-green-100 text-green-800 font-semibold text-xs text-center p-4 select-none">
+       <div class="bg-green-100 text-green-800 italic text-[10px] text-center p-4 select-none">
         Kegiatan pembagian bantuan sembako oleh LAZISNU Kotabaru kepada warga kurang mampu
        </div>
       </div>
@@ -895,26 +905,52 @@
     </div>
    </div>
   </div>
+  <!-- Modal Pilih Jenis Irigasi -->
+  <div id="modalIrigasi" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 opacity-0 pointer-events-none transition-opacity">
+    <div class="bg-white rounded-2xl shadow-xl p-8 max-w-sm w-full text-center">
+      <h3 class="text-green-800 font-bold text-xl mb-4">Pilih Jenis Pengairan</h3>
+      <p class="mb-6 text-green-700">Jenis pengairan akan menentukan besaran zakat pertanian:</p>
+      <div class="flex flex-col gap-4">
+        <button id="btn-irigasi-berbayar" class="bg-green-700 hover:bg-green-800 text-white font-semibold py-3 rounded-xl transition">Irigasi (5%)</button>
+        <button id="btn-irigasi-tadah" class="bg-green-100 hover:bg-green-200 text-green-800 font-semibold py-3 rounded-xl border border-green-400 transition">Tadah Hujan (10%)</button>
+      </div>
+    </div>
+  </div>
   <script>
-   // Navbar toggle dengan dropdown
+   // Navbar toggle dengan animasi
     const navToggle = document.getElementById("nav-toggle");
     const navMenu = document.getElementById("navbarNavDropdown");
+    let isMenuOpen = false;
 
     navToggle.addEventListener("click", () => {
-      const expanded = navToggle.getAttribute("aria-expanded") === "true";
-      navToggle.setAttribute("aria-expanded", !expanded);
-      navMenu.classList.toggle("hidden");
+      isMenuOpen = !isMenuOpen;
+      navToggle.setAttribute("aria-expanded", isMenuOpen);
+      
+      // Animasi hamburger icon
+      const icon = navToggle.querySelector("i");
+      if (isMenuOpen) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-times");
+        navMenu.classList.remove("hidden");
+        navMenu.classList.add("animate-fadeIn");
+      } else {
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+        navMenu.classList.add("hidden");
+        navMenu.classList.remove("animate-fadeIn");
+      }
     });
 
-    // Tutup dropdown saat klik di luar
+    // Tutup menu saat klik di luar
     document.addEventListener("click", (e) => {
-      if (!e.target.closest("#navbarNavDropdown")) {
-        const dropdowns = document.querySelectorAll("#navbarNavDropdown ul");
-        dropdowns.forEach(dropdown => {
-          if (!dropdown.classList.contains("hidden")) {
-            dropdown.classList.add("hidden");
-          }
-        });
+      if (!e.target.closest("#navbarNavDropdown") && !e.target.closest("#nav-toggle") && isMenuOpen) {
+        isMenuOpen = false;
+        navToggle.setAttribute("aria-expanded", false);
+        const icon = navToggle.querySelector("i");
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+        navMenu.classList.add("hidden");
+        navMenu.classList.remove("animate-fadeIn");
       }
     });
 
@@ -1041,13 +1077,13 @@
         case "pertanian":
           const nisabPertanian = 653;
           if (jumlah >= nisabPertanian) {
-            const jenisIrigasi = confirm(
-              "Gunakan irigasi berbayar?\nOK = Ya (Zakat 5%)\nCancel = Tidak (Zakat 10%)"
-            );
-            zakat = jumlah * (jenisIrigasi ? 0.05 : 0.1);
-            pesanTambahan = `\nJenis pengairan: ${
-              jenisIrigasi ? "Irigasi (5%)" : "Tadah hujan (10%)"
-            }`;
+            // Tampilkan modal custom, proses lanjut di callback
+            showIrigasiModal((isIrigasi) => {
+              const zakat = jumlah * (isIrigasi ? 0.05 : 0.1);
+              const pesanTambahan = `\nJenis pengairan: ${isIrigasi ? "Irigasi (5%)" : "Tadah hujan (10%)"}`;
+              tampilkanHasilZakat(zakat, pesanTambahan);
+            });
+            return false; // Stop proses, lanjut di callback
           } else {
             alertMessage.textContent =
               "Hasil pertanian belum mencapai nisab (653 kg beras).";
@@ -1373,6 +1409,40 @@
       if (id === "modalGaleri") {
         renderGaleri();
       }
+    }
+
+    function showIrigasiModal(callback) {
+      const modal = document.getElementById('modalIrigasi');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = "hidden";
+
+      // Handler tombol
+      const btnBerbayar = document.getElementById('btn-irigasi-berbayar');
+      const btnTadah = document.getElementById('btn-irigasi-tadah');
+
+      // Pastikan handler hanya sekali
+      btnBerbayar.onclick = () => {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = "";
+        callback(true);
+      };
+      btnTadah.onclick = () => {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = "";
+        callback(false);
+      };
+    }
+
+    // Fungsi untuk menampilkan hasil zakat setelah pilih irigasi
+    function tampilkanHasilZakat(zakat, pesanTambahan) {
+      alertDiv.classList.add("hidden");
+      zakat = Math.round(zakat);
+      totalZakatEl.textContent = formatRupiah(zakat.toString(), "Rp ");
+      const waMessage = encodeURIComponent(
+        `Assalamu'alaikum, saya ingin membayar zakat sebesar ${totalZakatEl.textContent} untuk jenis zakat ${jenisZakatSelect.options[jenisZakatSelect.selectedIndex].text}.${pesanTambahan}\nMohon petunjuk pembayaran.`
+      );
+      btnBayarZakat.href = `https://wa.me/6281234567890?text=${waMessage}`;
+      hasilZakat.classList.remove("hidden");
     }
   </script>
  </body>
