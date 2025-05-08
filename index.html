@@ -1711,7 +1711,7 @@
         container.innerHTML = instansiUtama.map(instansi => `
           <div class="relative cursor-pointer group bg-white rounded-xl border-4 border-green-500 shadow-md hover:shadow-lg transition-shadow" onclick="showFoto(this.querySelector('img'), '${instansi.nama}')">
             <img alt="Logo ${instansi.nama}" class="w-full aspect-square object-contain p-4 hover:scale-105 transition-transform" loading="lazy" src="${instansi.logo}"/>
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 hidden md:block">
               <h6 class="text-white font-bold text-lg">${instansi.nama}</h6>
               <p class="text-green-200 text-sm">${instansi.status}</p>
             </div>
