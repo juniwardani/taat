@@ -27,6 +27,45 @@
        aspect-ratio: 1 / 1 !important;
      }
    }
+   /* Custom grid for gallery and instansi: 3 columns and 3 rows */
+   #galeri-taat .gallery-grid,
+   #instansi-container {
+     display: grid !important;
+     grid-template-columns: repeat(3, 1fr) !important;
+     grid-template-rows: repeat(3, auto) !important;
+     gap: 0.75rem !important;
+   }
+   #galeri-taat .gallery-item,
+   #instansi-container > div {
+     width: 100% !important;
+     aspect-ratio: 1 / 1 !important;
+   }
+   #galeri-taat .gallery-item img,
+   #instansi-container img {
+     width: 100% !important;
+     height: 100% !important;
+     object-fit: contain !important;
+     padding: 1rem !important;
+     background-color: white !important;
+   }
+   /* Modal grid */
+   #modalGaleri .grid,
+   #modalInstansi .grid {
+     display: grid !important;
+     grid-template-columns: repeat(3, 1fr) !important;
+     gap: 0.75rem !important;
+   }
+   #modalGaleri .grid > div,
+   #modalInstansi .grid > div {
+     width: 100% !important;
+   }
+   #modalGaleri .grid img,
+   #modalInstansi .grid img {
+     aspect-ratio: 1 / 1 !important;
+     object-fit: contain !important;
+     padding: 1rem !important;
+     background-color: white !important;
+   }
   </style>
   <style>
     @keyframes fadeIn {
@@ -652,7 +691,80 @@
      </div>
     </div>
    </section>
-   <!-- 9. Kontak Kami -->
+   <!-- 9. Instansi Pendukung -->
+   <section class="mb-12 bg-green-50 rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow max-w-7xl mx-auto" id="instansi-pendukung" tabindex="0">
+    <h2 class="text-center text-green-800 font-extrabold text-xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
+      Mitra Pendukung Program TAAT
+    </h2>
+    <div id="instansi-container" class="gallery-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Kartu instansi akan di-render oleh JavaScript -->
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex justify-center items-center gap-2 mt-8 mb-4">
+      <button id="prev-page-instansi" class="bg-green-100 hover:bg-green-200 text-green-800 font-semibold px-4 py-2 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="flex items-center gap-2">
+        <span class="text-green-800 font-semibold">Halaman</span>
+        <span id="current-page-instansi" class="bg-green-700 text-white font-bold px-3 py-1 rounded-lg">1</span>
+        <span class="text-green-800 font-semibold">dari</span>
+        <span id="total-pages-instansi" class="bg-green-100 text-green-800 font-bold px-3 py-1 rounded-lg">1</span>
+      </div>
+      <button id="next-page-instansi" class="bg-green-100 hover:bg-green-200 text-green-800 font-semibold px-4 py-2 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="text-center mt-4">
+      <button aria-label="Lihat Semua Instansi Pendukung" class="inline-flex items-center gap-2 border-2 border-green-700 text-green-700 font-semibold px-6 py-3 rounded-xl hover:bg-green-700 hover:text-green-100 transition" onclick="openModal('modalInstansi')" type="button">
+        Lihat Semua
+        <i class="fas fa-images"></i>
+      </button>
+    </div>
+
+    <div class="mt-8 text-center max-w-3xl mx-auto">
+      <p class="text-green-800 mb-6">
+        Kami sangat mengapresiasi dukungan dari berbagai Instansi, Lembaga, dan pelaku UMKM lokal yang telah menjadi donatur program TAAT. Dukungan mereka sangat berarti dalam membantu kami mencapai tujuan bersama.
+      </p>
+      <a href="https://wa.me/6281256568899?text=Assalamu'alaikum,%20saya%20ingin%20mendaftarkan%20instansi%20kami%20untuk%20bergabung%20sebagai%20instansi%20pendukung%20LAZISNU%20Kotabaru.%20Mohon%20informasi%20lebih%20lanjut." class="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-green-100 font-semibold px-6 py-3 rounded-xl shadow-lg transition">
+        <i class="fab fa-whatsapp"></i>
+        Bergabung Menjadi Mitra Pendukung
+      </a>
+    </div>
+   </section>
+
+   <!-- Modal Instansi Lengkap -->
+   <div aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity overflow-auto" id="modalInstansi">
+    <div aria-labelledby="modalInstansiLabel" aria-modal="true" class="bg-green-50 rounded-3xl shadow-lg max-w-6xl w-full relative p-6" role="dialog">
+      <div class="flex justify-between items-center mb-6">
+        <div>
+          <h5 class="text-green-800 font-extrabold text-3xl uppercase tracking-widest" id="modalInstansiLabel">
+            Instansi Pendukung
+          </h5>
+        </div>
+        <button aria-label="Close modal" class="text-green-700 hover:text-green-900 focus:outline-none" onclick="closeModal('modalInstansi')">
+          <i class="fas fa-times fa-lg"></i>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-h-[70vh] overflow-y-auto p-2">
+        <!-- Kartu instansi akan di-render oleh JavaScript -->
+      </div>
+
+      <div class="mt-6 flex justify-between items-center">
+        <div class="text-green-600">
+          <i class="fas fa-info-circle"></i>
+          <span class="ml-2">Total 3 Instansi Pendukung</span>
+        </div>
+        <button class="bg-green-700 hover:bg-green-800 text-green-100 font-semibold px-6 py-3 rounded-xl shadow-lg transition flex items-center gap-2" onclick="closeModal('modalInstansi')" type="button">
+          <i class="fas fa-times"></i>
+          Tutup
+        </button>
+      </div>
+    </div>
+   </div>
+   <!-- 10. Kontak Kami -->
    <section class="mb-12 max-w-7xl mx-auto px-4 py-10" id="kontak-kami" tabindex="0">
 <h2 class="text-center text-green-800 font-extrabold text-xl uppercase tracking-widest mb-10 border-b-4 border-green-500 pb-2 drop-shadow-md">
 
@@ -1523,6 +1635,152 @@
       btnBayarZakat.href = `https://wa.me/6281256568899?text=${waMessage}`;
       hasilZakat.classList.remove("hidden");
     }
+
+    // Data Instansi Pendukung
+    const dataInstansi = [
+      {
+        id: 1,
+        nama: "MI Al Muslimun",
+        logo: "img/mi.png",
+        status: "Lembaga Pendidikan Dasar",
+        deskripsi: "Lembaga Pendidikan Dasar"
+      },
+      {
+        id: 2,
+        nama: "Rumah Tahfidz Saijaan",
+        logo: "img/rts.jpg",
+        status: "Lembaga Pendidikan Al-Quran",
+        deskripsi: "Lembaga Pendidikan Al-Quran"
+      },
+      {
+        id: 3,
+        nama: "Balapak Project",
+        logo: "img/balapak.jpg",
+        status: "UMKM Pendukung",
+        deskripsi: "Pelaku UMKM Lokal"
+      }
+    ];
+
+    // Fungsi untuk menampilkan kartu instansi
+    function renderInstansiCard(instansi) {
+      return `
+        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+          <div class="relative group cursor-pointer" onclick="showFoto(this.querySelector('img'), '${instansi.nama}')" onkeypress="if(event.key==='Enter'){showFoto(this.querySelector('img'), '${instansi.nama}')}" role="button" tabindex="0">
+            <img alt="Logo ${instansi.nama}" class="rounded-t-xl w-full aspect-square object-cover" loading="lazy" src="${instansi.logo}"/>
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+              <h6 class="text-white font-bold text-lg">${instansi.nama}</h6>
+              <p class="text-green-200 text-sm">${instansi.status}</p>
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="flex items-center gap-2 text-green-600">
+              <i class="fas fa-info-circle"></i>
+              <span class="text-sm">${instansi.deskripsi}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Variabel untuk pagination instansi
+    let currentPageInstansi = 1;
+    const itemsPerPageInstansi = 6;
+
+    // Fungsi untuk menampilkan instansi dengan pagination
+    function renderInstansiUtama() {
+      const container = document.getElementById('instansi-container');
+      const totalPages = Math.ceil(dataInstansi.length / itemsPerPageInstansi);
+      
+      // Update total pages display
+      document.getElementById('total-pages-instansi').textContent = totalPages;
+      document.getElementById('current-page-instansi').textContent = currentPageInstansi;
+      
+      // Enable/disable pagination buttons
+      document.getElementById('prev-page-instansi').disabled = currentPageInstansi === 1;
+      document.getElementById('next-page-instansi').disabled = currentPageInstansi === totalPages;
+      
+      // Calculate start and end index for current page
+      const startIndex = (currentPageInstansi - 1) * itemsPerPageInstansi;
+      const endIndex = startIndex + itemsPerPageInstansi;
+      
+      // Get instansi for current page
+      const instansiUtama = dataInstansi.slice(startIndex, endIndex);
+      
+      // Render instansi cards
+      if (container) {
+        container.innerHTML = instansiUtama.map(instansi => `
+          <div class="relative cursor-pointer group bg-white rounded-xl border-4 border-green-500 shadow-md hover:shadow-lg transition-shadow" onclick="showFoto(this.querySelector('img'), '${instansi.nama}')">
+            <img alt="Logo ${instansi.nama}" class="w-full aspect-square object-contain p-4 hover:scale-105 transition-transform" loading="lazy" src="${instansi.logo}"/>
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+              <h6 class="text-white font-bold text-lg">${instansi.nama}</h6>
+              <p class="text-green-200 text-sm">${instansi.status}</p>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Event listeners untuk pagination instansi
+    document.getElementById('prev-page-instansi').addEventListener('click', () => {
+      if (currentPageInstansi > 1) {
+        currentPageInstansi--;
+        renderInstansiUtama();
+        document.getElementById('instansi-container').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
+    document.getElementById('next-page-instansi').addEventListener('click', () => {
+      const totalPages = Math.ceil(dataInstansi.length / itemsPerPageInstansi);
+      if (currentPageInstansi < totalPages) {
+        currentPageInstansi++;
+        renderInstansiUtama();
+        document.getElementById('instansi-container').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
+    // Fungsi untuk menampilkan modal instansi
+    function renderModalInstansi() {
+      const modalContainer = document.querySelector('#modalInstansi .grid');
+      if (modalContainer) {
+        modalContainer.innerHTML = dataInstansi.map(instansi => `
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            <div class="relative group cursor-pointer bg-white rounded-t-xl border-b-4 border-green-500" onclick="showFoto(this.querySelector('img'), '${instansi.nama}')">
+              <img alt="Logo ${instansi.nama}" class="w-full aspect-square object-contain p-4" loading="lazy" src="${instansi.logo}"/>
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                <h6 class="text-white font-bold text-lg">${instansi.nama}</h6>
+                <p class="text-green-200 text-sm">${instansi.status}</p>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center gap-2 text-green-600">
+                <i class="fas fa-info-circle"></i>
+                <span class="text-sm">${instansi.deskripsi}</span>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Update fungsi openModal untuk menangani modal instansi
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove("opacity-0", "pointer-events-none");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      
+      if (id === "modalGaleri") {
+        renderGaleri();
+      } else if (id === "modalInstansi") {
+        renderModalInstansi();
+      }
+    }
+
+    // Reset pagination instansi saat halaman dimuat
+    document.addEventListener('DOMContentLoaded', () => {
+      currentPageInstansi = 1;
+      renderInstansiUtama();
+    });
   </script>
  </body>
 </html>
