@@ -397,7 +397,7 @@
      <span id="alert-message">
      </span>
     </div>
-    <div aria-atomic="true" aria-live="polite" class="hidden mt-6 p-6 rounded border border-green-600 bg-green-100 text-green-800 max-w-md mx-auto" id="hasil-zakat" role="region">
+    <div class="hidden mt-6 p-6 rounded border border-green-600 bg-green-100 text-green-800 max-w-md mx-auto" id="hasil-zakat" role="region">
      <h5 class="text-green-700 font-bold text-xl mb-3">
       Hasil Kalkulasi
      </h5>
@@ -411,6 +411,20 @@
       </i>
       Bayar Sekarang
      </a>
+    </div>
+    <div class="hidden mt-6 p-6 rounded border border-yellow-500 bg-yellow-50 text-yellow-800 max-w-md mx-auto" id="alternatif-donasi" role="region">
+      <h5 class="text-yellow-700 font-bold text-xl mb-3">Belum Wajib Zakat</h5>
+      <p class="mb-4">Meskipun belum mencapai nisab, Anda tetap bisa berdonasi atau bersedekah untuk membantu sesama.</p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#donasi-online" class="inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-xl transition">
+          <i class="fas fa-hand-holding-heart"></i>
+          Donasi Online
+        </a>
+        <a href="https://wa.me/6281256568899" class="inline-flex items-center justify-center gap-2 border-2 border-yellow-500 text-yellow-700 hover:bg-yellow-500 hover:text-white font-semibold px-6 py-3 rounded-xl transition">
+          <i class="fab fa-whatsapp"></i>
+          Hubungi Kami
+        </a>
+      </div>
     </div>
     <div class="mt-8 p-4 rounded bg-green-200 border border-green-400 max-w-md mx-auto text-green-800 text-sm">
       <button onclick="openModal('modalNisab')" class="w-full flex items-center justify-between bg-green-100 hover:bg-green-200 text-green-800 font-semibold px-4 py-3 rounded-xl transition">
@@ -1017,6 +1031,7 @@
         alertMessage.textContent = "Mohon masukkan jumlah yang valid.";
         alertDiv.classList.remove("hidden");
         hasilZakat.classList.add("hidden");
+        document.getElementById("alternatif-donasi").classList.add("hidden");
         return false;
       }
 
@@ -1031,10 +1046,10 @@
           if (jumlah * 12 >= nisabEmas) {
             zakat = jumlah * 0.025;
           } else {
-            alertMessage.textContent =
-              "Penghasilan tahunan belum mencapai nisab (setara 85 gram emas/tahun).";
+            alertMessage.textContent = "Penghasilan tahunan belum mencapai nisab (setara 85 gram emas/tahun).";
             alertDiv.classList.remove("hidden");
             hasilZakat.classList.add("hidden");
+            document.getElementById("alternatif-donasi").classList.remove("hidden");
             return false;
           }
           break;
@@ -1043,20 +1058,20 @@
           if (jumlah >= nisabEmas) {
             zakat = jumlah * 0.025;
           } else {
-            alertMessage.textContent =
-              "Total harta belum mencapai nisab (setara 85 gram emas).";
+            alertMessage.textContent = "Total harta belum mencapai nisab (setara 85 gram emas).";
             alertDiv.classList.remove("hidden");
             hasilZakat.classList.add("hidden");
+            document.getElementById("alternatif-donasi").classList.remove("hidden");
             return false;
           }
           break;
 
         case "emasperak":
           if (jumlah < 85) {
-            alertMessage.textContent =
-              "Jumlah emas/perak kurang dari nisab (85 gram), tidak wajib zakat.";
+            alertMessage.textContent = "Jumlah emas/perak kurang dari nisab (85 gram), tidak wajib zakat.";
             alertDiv.classList.remove("hidden");
             hasilZakat.classList.add("hidden");
+            document.getElementById("alternatif-donasi").classList.remove("hidden");
             return false;
           }
           zakat = jumlah * hargaEmasPerGram * 0.025;
@@ -1066,10 +1081,10 @@
           if (jumlah >= nisabEmas) {
             zakat = jumlah * 0.025;
           } else {
-            alertMessage.textContent =
-              "Nilai perdagangan belum mencapai nisab (setara 85 gram emas).";
+            alertMessage.textContent = "Nilai perdagangan belum mencapai nisab (setara 85 gram emas).";
             alertDiv.classList.remove("hidden");
             hasilZakat.classList.add("hidden");
+            document.getElementById("alternatif-donasi").classList.remove("hidden");
             return false;
           }
           break;
@@ -1077,37 +1092,36 @@
         case "pertanian":
           const nisabPertanian = 653;
           if (jumlah >= nisabPertanian) {
-            // Tampilkan modal custom, proses lanjut di callback
             showIrigasiModal((isIrigasi) => {
               const zakat = jumlah * (isIrigasi ? 0.05 : 0.1);
               const pesanTambahan = `\nJenis pengairan: ${isIrigasi ? "Irigasi (5%)" : "Tadah hujan (10%)"}`;
               tampilkanHasilZakat(zakat, pesanTambahan);
             });
-            return false; // Stop proses, lanjut di callback
+            return false;
           } else {
-            alertMessage.textContent =
-              "Hasil pertanian belum mencapai nisab (653 kg beras).";
+            alertMessage.textContent = "Hasil pertanian belum mencapai nisab (653 kg beras).";
             alertDiv.classList.remove("hidden");
             hasilZakat.classList.add("hidden");
+            document.getElementById("alternatif-donasi").classList.remove("hidden");
             return false;
           }
           break;
 
         case "peternakan":
-          alertMessage.textContent =
-            "Untuk zakat peternakan, silakan konsultasikan langsung dengan amil zakat untuk perhitungan yang lebih akurat sesuai jenis dan jumlah hewan ternak.";
+          alertMessage.textContent = "Untuk zakat peternakan, silakan konsultasikan langsung dengan amil zakat untuk perhitungan yang lebih akurat sesuai jenis dan jumlah hewan ternak.";
           alertDiv.classList.remove("hidden");
           hasilZakat.classList.add("hidden");
+          document.getElementById("alternatif-donasi").classList.remove("hidden");
           return false;
 
         case "tabungan":
           if (jumlah >= nisabEmas) {
             zakat = jumlah * 0.025;
           } else {
-            alertMessage.textContent =
-              "Tabungan belum mencapai nisab (setara 85 gram emas).";
+            alertMessage.textContent = "Tabungan belum mencapai nisab (setara 85 gram emas).";
             alertDiv.classList.remove("hidden");
             hasilZakat.classList.add("hidden");
+            document.getElementById("alternatif-donasi").classList.remove("hidden");
             return false;
           }
           break;
@@ -1116,10 +1130,10 @@
           if (jumlah >= nisabEmas) {
             zakat = jumlah * 0.025;
           } else {
-            alertMessage.textContent =
-              "Hasil investasi belum mencapai nisab (setara 85 gram emas).";
+            alertMessage.textContent = "Hasil investasi belum mencapai nisab (setara 85 gram emas).";
             alertDiv.classList.remove("hidden");
             hasilZakat.classList.add("hidden");
+            document.getElementById("alternatif-donasi").classList.remove("hidden");
             return false;
           }
           break;
@@ -1128,10 +1142,12 @@
           alertMessage.textContent = "Pilih jenis zakat terlebih dahulu.";
           alertDiv.classList.remove("hidden");
           hasilZakat.classList.add("hidden");
+          document.getElementById("alternatif-donasi").classList.add("hidden");
           return false;
       }
 
       alertDiv.classList.add("hidden");
+      document.getElementById("alternatif-donasi").classList.add("hidden");
 
       zakat = Math.round(zakat);
       totalZakatEl.textContent = formatRupiah(zakat.toString(), "Rp ");
