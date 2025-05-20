@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Under Development</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1b5e20, #4caf50);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .maintenance-box {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-size: clamp(1.5em, 4vw, 2em);
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin: 10px 0;
+            font-size: clamp(1em, 2.5vw, 1.1em);
+        }
+
+        .construction-icon {
+            margin: 30px 0;
+        }
+
+        .construction-icon img {
+            max-width: min(150px, 30vw);
+            height: auto;
+        }
+
+        .signature {
+            margin-top: 30px;
+            color: #1e3c72;
+            font-style: italic;
+            font-weight: 500;
+            font-size: clamp(0.95em, 2.5vw, 1.1em);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .maintenance-box {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="maintenance-box">
+            <h1>Website Ditutup</h1>
+            <div class="construction-icon">
+                <img src="construction.png" alt="Under Construction">
+            </div>
+            <p>Website ini ditutup sampai waktu yang tidak ditentukan.</p>
+            <p>Mohon maaf atas ketidaknyamanannya.</p>
+            <p class="signature">Hormat Kami,<br>Tim Pengembang Web</p>
+        </div>
+    </div>
+</body>
+</html>
